@@ -1883,7 +1883,13 @@ async function handleAnthropicMessagesToGemini(req, res, { vendor, baseModel }) 
     }
 
     // Claude Code 常见探测模型：优先回退到 Opus 4.5（如果账号支持）
-    const preferred = ['claude-opus-4-5', 'claude-sonnet-4-5-thinking', 'claude-sonnet-4-5']
+    const preferred = [
+      'claude-opus-4-7',
+      'claude-opus-4-7-thinking',
+      'claude-opus-4-5',
+      'claude-sonnet-4-5-thinking',
+      'claude-sonnet-4-5'
+    ]
     for (const candidate of preferred) {
       if (normalizedSupported.includes(candidate)) {
         return candidate

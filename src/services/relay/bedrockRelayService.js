@@ -536,6 +536,9 @@ class BedrockRelayService {
 
     // 标准Claude模型名到Bedrock模型名的映射表
     const modelMapping = {
+      // Claude Opus 4.7
+      'claude-opus-4-7': 'global.anthropic.claude-opus-4-7-v1',
+
       // Claude Opus 4.6
       'claude-opus-4-6': 'global.anthropic.claude-opus-4-6-v1',
 
@@ -597,6 +600,10 @@ class BedrockRelayService {
     }
 
     // 查找映射
+    if (cleanModelName.startsWith('claude-opus-4-7-')) {
+      return 'global.anthropic.claude-opus-4-7-v1'
+    }
+
     const mappedModel = modelMapping[cleanModelName]
     if (mappedModel) {
       return mappedModel

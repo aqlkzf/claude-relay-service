@@ -1489,6 +1489,13 @@
                   <!-- 快捷添加按钮 -->
                   <div class="mt-3 flex flex-wrap gap-2">
                     <button
+                      class="rounded-lg bg-fuchsia-100 px-3 py-1 text-xs text-fuchsia-700 transition-colors hover:bg-fuchsia-200 dark:bg-fuchsia-900/30 dark:text-fuchsia-400 dark:hover:bg-fuchsia-900/50"
+                      type="button"
+                      @click="addPresetMapping('claude-opus-4-7', 'claude-opus-4-7')"
+                    >
+                      + Opus 4.7
+                    </button>
+                    <button
                       class="rounded-lg bg-violet-100 px-3 py-1 text-xs text-violet-700 transition-colors hover:bg-violet-200 dark:bg-violet-900/30 dark:text-violet-400 dark:hover:bg-violet-900/50"
                       type="button"
                       @click="addPresetMapping('claude-opus-4-6', 'claude-opus-4-6')"
@@ -3277,6 +3284,13 @@
                     "
                   >
                     + Sonnet 4.5
+                  </button>
+                  <button
+                    class="rounded-lg bg-fuchsia-100 px-3 py-1 text-xs text-fuchsia-700 transition-colors hover:bg-fuchsia-200 dark:bg-fuchsia-900/30 dark:text-fuchsia-400 dark:hover:bg-fuchsia-900/50"
+                    type="button"
+                    @click="addPresetMapping('claude-opus-4-7', 'claude-opus-4-7')"
+                  >
+                    + Opus 4.7
                   </button>
                   <button
                     class="rounded-lg bg-violet-100 px-3 py-1 text-xs text-violet-700 transition-colors hover:bg-violet-200 dark:bg-violet-900/30 dark:text-violet-400 dark:hover:bg-violet-900/50"
